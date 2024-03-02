@@ -12,12 +12,12 @@ function App() {
     <>
       <Navbar />
       <main className='main'>
-        {/* <Header /> */}
-        {/* <HostingItemsList /> */}
-        <RelatedDealItemsList />
-        <EmailSignupContainer />
+        <Header />
+        <HostingItemsList />
+        {/* <RelatedDealItemsList /> */}
+        {/* <EmailSignupContainer /> */}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

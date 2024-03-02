@@ -1,10 +1,8 @@
 body {
   font-family: $ff-body;
   font-size: $fs-body;
-  color: $clr-neutral-200;
   background-color: $clr-accent-300;
-  color: $clr-neutral-200;
-  color-scheme: light dark;
+  color: $clr-neutral-500;
 }
 html {
   scroll-behavior: smooth;
@@ -72,4 +70,37 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+// Defalt element style
+.hidden {
+  display: none;
+}
+
+@media (max-width: 770px) {
+  .hidden {
+    display: block;
+  }
+}
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.container {
+  width: calc(min(1025px, 95%));
+  margin: 0 auto;
+}
+
+button {
+  border-radius: $radius;
+  font-family: inherit;
+  outline: none;
+  border: none;
+  transition: $ts-400;
+  cursor: pointer;
+}
+
+.main {
+  background-color: $clr-accent-300;
 }

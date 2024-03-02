@@ -1,0 +1,21 @@
+.form-control {
+  width: calc(min(350px, 95%));
+  border-radius: 8px;
+  background-color: $clr-accent-100;
+  align-items: center;
+  display: flex;
+
+  .input {
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    outline: none;
+  }
+
+  .icon-label {
+    margin: 0.5rem;
+    .icon {
+      color: $clr-neutral-100;
+    }
+  }
+}

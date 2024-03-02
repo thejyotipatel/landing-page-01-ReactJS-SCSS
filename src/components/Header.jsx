@@ -11,7 +11,6 @@ const headerTags = [
 ]
 
 const Header = () => {
-  const day = new Date()
   return (
     <>
       <header className='container'>
@@ -22,12 +21,12 @@ const Header = () => {
             <p className=''>
               <span className='icon'>
                 <CiCircleCheck />
+                Last Updated - February 22, 2020
               </span>
-              Last Updated - February 22, 2020
               <span className='icon'>
                 <CiCircleInfo />
+                Advertising Disclosure
               </span>
-              Advertising Disclosure
             </p>
             <button className='btn'>
               Top Relevant
@@ -38,7 +37,7 @@ const Header = () => {
           </div>
 
           {/* TAGS */}
-          <ul className='tags'>
+          <ul className='tags' role='list'>
             {headerTags.map((item, index) => {
               return (
                 <li key={index} className=''>

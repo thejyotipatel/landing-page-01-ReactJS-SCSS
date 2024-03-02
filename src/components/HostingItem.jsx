@@ -20,30 +20,30 @@ const HostingItem = ({ item }) => {
 
   return (
     <>
+      <div className='item-number'>{id}</div>
+
+      {id === 1 && (
+        <div className='best-tag'>
+          <span className='icon'>
+            <BsTrophy />
+          </span>
+          Best Choice
+        </div>
+      )}
+      {id === 2 && (
+        <div className='best-tag'>
+          <span className='icon'>
+            <IoDiamondOutline />
+          </span>
+          Best Value
+        </div>
+      )}
       <div className='hosting-item'>
-        <div className='item-number'>{id}</div>
-
-        {id === 1 && (
-          <div className='best-tag'>
-            <span className='icon'>
-              <BsTrophy />
-            </span>
-            Best Choice
-          </div>
-        )}
-        {id === 2 && (
-          <div className='best-tag'>
-            <span className='icon'>
-              <IoDiamondOutline />
-            </span>
-            Best Value
-          </div>
-        )}
-
         <div className='hosting-item-center'>
           <div className='img-container'>
             <img src={image} alt={imgText} />
           </div>
+
           <div className='info-container'>
             <p className=''>
               <span>{header}</span> {desc}
@@ -80,6 +80,7 @@ const HostingItem = ({ item }) => {
               )}
             </button>
           </div>
+
           <RatingContainer ratingNum={ratingNum} ratingText={ratingText} />
         </div>
       </div>

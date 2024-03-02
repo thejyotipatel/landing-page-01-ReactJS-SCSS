@@ -8,41 +8,41 @@ const HostingItemsList = () => {
       <section className='container'>
         {/* breadcrumbs */}
         <div className=' breadcrumbs '>
-          <ul>
+          <ul role='list'>
             <li>
               <a className='link' href='/'>
                 Home
               </a>
             </li>
             <li>
+              <span className='icon'>
+                <AiOutlineRight />
+              </span>
               <a className='link' href='#'>
-                <span className='icon'>
-                  <AiOutlineRight />
-                </span>
                 Hosting for all
               </a>
             </li>
             <li>
+              <span className='icon'>
+                <AiOutlineRight />
+              </span>
               <a className='link' href='#'>
-                <span className='icon'>
-                  <AiOutlineRight />
-                </span>
                 Hosting
               </a>
             </li>
             <li>
+              <span className='icon'>
+                <AiOutlineRight />
+              </span>
               <a className='link' href='#'>
-                <span className='icon'>
-                  <AiOutlineRight />
-                </span>
                 Hosting6
               </a>
             </li>
             <li>
+              <span className='icon'>
+                <AiOutlineRight />
+              </span>
               <a className='link' href='#'>
-                <span className='icon'>
-                  <AiOutlineRight />
-                </span>
                 Hosting5
               </a>
             </li>
@@ -50,7 +50,7 @@ const HostingItemsList = () => {
         </div>
 
         {/* Hosting  List */}
-        <div className='lists'>
+        <div className='hosting-lists'>
           {hostingCardData.map((item) => {
             return <HostingCard key={item.id} item={item} />
           })}

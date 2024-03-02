@@ -1,0 +1,52 @@
+.breadcrumbs {
+  width: 100%;
+  margin: 1em 0;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+
+    li {
+      display: flex;
+      font-size: $fs-200;
+      align-items: center;
+      color: $clr-neutral-300;
+
+      gap: 0.5em;
+      span {
+        margin-left: 0.5em;
+      }
+    }
+  }
+}
+
+// Hosting lists
+.hosting-lists {
+  width: 100%;
+
+  .hosting-item {
+    width: calc(min(350px, 95%));
+    border-radius: 8px;
+    background-color: $clr-accent-100;
+    align-items: center;
+    display: flex;
+    padding: 1rem;
+    width: 100%;
+    &-center {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      .img-container {
+      }
+      .info-container {
+      }
+    }
+  }
+}
+@media (max-width: 770px) {
+  .breadcrumbs {
+  }
+}
