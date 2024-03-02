@@ -1,10 +1,10 @@
+import { useState } from 'react'
 import { CiSearch } from 'react-icons/ci'
 import { RiMenu3Fill } from 'react-icons/ri'
 import { AiOutlineCloseCircle } from 'react-icons/ai'
 
 import FormInput from './FormInput'
 import { navbarLinks } from '../utils/links'
-import { useState } from 'react'
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false)

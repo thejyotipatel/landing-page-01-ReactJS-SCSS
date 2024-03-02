@@ -1,6 +1,7 @@
+import { AiOutlineRight } from 'react-icons/ai'
+
 import { hostingCardData } from '../utils/cardData'
 import HostingCard from './HostingItem'
-import { AiOutlineRight } from 'react-icons/ai'
 
 const HostingItemsList = () => {
   return (

@@ -20,15 +20,18 @@ const RelatedDealItem = ({ item }) => {
           </div>
           <div className='info-container'>
             <div className='info-header'>
-              <p>{perOff}% Off</p>
-              {limitedTime && <p> Limited time</p>}
+              <p>
+                <span>{perOff}% Off</span>
+                <span>{limitedTime && 'Limited time '}</span>
+              </p>
             </div>
             <h3>{header}</h3>
             <p>{desc}</p>
             <div className='price-container'>
               <p>
-                ${price} <span>${maxPrice}</span>
-                <span className='off-price'>({priceOff})%Off</span>
+                <span className='price-1'>${price}</span>
+                <span className='price-2'>${maxPrice}</span>
+                <span className='price-3'>({priceOff})%Off</span>
               </p>
             </div>
           </div>

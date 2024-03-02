@@ -53,6 +53,7 @@ export const hostingCardData = [
     ratingNum: 9.1,
     ratingText: 'Very Good',
     showMore: false,
+    perOff: 26,
   },
 ]
 

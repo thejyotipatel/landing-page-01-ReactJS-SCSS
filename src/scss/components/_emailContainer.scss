@@ -1,0 +1,48 @@
+.email-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 2rem;
+  padding-top: 2rem;
+  h1 {
+    font-size: 32px;
+    color: $clr-neutral-400;
+    width: calc(min(400px, 90%));
+    font-weight: normal;
+  }
+
+  .input-control {
+    display: flex;
+    align-items: center;
+    .form-control {
+      border-radius: $radius 0 0 $radius;
+      padding: 0.2rem 0;
+      height: fit-content;
+    }
+    .btn {
+      background-color: $clr-primary-200;
+      font-size: $fs-300;
+      color: $clr-accent-100;
+      padding: 0.55rem 0;
+      width: 100%;
+      max-width: 95px;
+
+      border-radius: 0 $radius $radius 0;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .email-center {
+    gap: 2em;
+    h1 {
+      font-size: 25px;
+      width: 100%;
+    }
+    .input-control {
+      width: 80%;
+    }
+    flex-direction: column;
+    align-items: center;
+  }
+}

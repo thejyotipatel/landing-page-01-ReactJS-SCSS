@@ -1,6 +1,7 @@
-import { IoIosArrowDown } from 'react-icons/io'
+import { IoIosArrowDown, IoIosCheckmark } from 'react-icons/io'
 import { IoDiamondOutline } from 'react-icons/io5'
 import { BsTrophy } from 'react-icons/bs'
+
 import RatingContainer from './RatingContainer'
 
 const HostingItem = ({ item }) => {
@@ -16,42 +17,50 @@ const HostingItem = ({ item }) => {
     ratingNum,
     ratingText,
     showMore,
+    perOff,
   } = item
 
   return (
     <>
-      <div className='item-number'>{id}</div>
-
-      {id === 1 && (
-        <div className='best-tag'>
-          <span className='icon'>
-            <BsTrophy />
-          </span>
-          Best Choice
-        </div>
-      )}
-      {id === 2 && (
-        <div className='best-tag'>
-          <span className='icon'>
-            <IoDiamondOutline />
-          </span>
-          Best Value
-        </div>
-      )}
       <div className='hosting-item'>
+        {id === 1 && (
+          <div className='best-tag'>
+            <span className='icon'>
+              <BsTrophy />
+            </span>
+            Best Choice
+          </div>
+        )}
+        {id === 2 && (
+          <div className='best-tag'>
+            <span className='icon'>
+              <IoDiamondOutline />
+            </span>
+            Best Value
+          </div>
+        )}
+
+        <div className='item-number'>{id}</div>
+
         <div className='hosting-item-center'>
           <div className='img-container'>
             <img src={image} alt={imgText} />
+            <p>{imgText}</p>
           </div>
 
           <div className='info-container'>
-            <p className=''>
+            <p>
               <span>{header}</span> {desc}
             </p>
+
+            {perOff && <p className='peroff'>{perOff}% Off</p>}
+
             <h3>Main highlights</h3>
-            {mainHLText && <p>{mainHLText}</p>}
+
+            {mainHLText && <p className='text'>{mainHLText}</p>}
+
             {mainHLList && (
-              <ul>
+              <ul className='text-list' role='list'>
                 {mainHLList.map((l, index) => {
                   return (
                     <li key={index}>
@@ -62,12 +71,22 @@ const HostingItem = ({ item }) => {
                 })}
               </ul>
             )}
+
             {list && (
               <>
-                <p>Why we love it</p>
-                {list.map((item, index) => {
-                  return <li key={index}>{item}</li>
-                })}
+                <p className='list2-head'>Why we love it</p>
+                <ul className='list2' role='list'>
+                  {list.map((item, index) => {
+                    return (
+                      <li key={index}>
+                        <span>
+                          <IoIosCheckmark />
+                        </span>
+                        {item}
+                      </li>
+                    )
+                  })}
+                </ul>
               </>
             )}
 

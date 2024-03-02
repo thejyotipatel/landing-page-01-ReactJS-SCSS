@@ -8,8 +8,8 @@ const EmailSignupContainer = () => {
           <h1>Sign up and get exclusive special deals</h1>
           <div className='input-control'>
             <FormInput type='email' name='email' />
+            <button className='btn'>Sign Up</button>
           </div>
-          <button className='btn'>Sign Up</button>
         </div>
       </section>
     </>

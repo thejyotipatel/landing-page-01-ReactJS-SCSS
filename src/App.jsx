@@ -14,10 +14,10 @@ function App() {
       <main className='main'>
         <Header />
         <HostingItemsList />
-        {/* <RelatedDealItemsList /> */}
-        {/* <EmailSignupContainer /> */}
+        <RelatedDealItemsList />
+        <EmailSignupContainer />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }

@@ -1,0 +1,104 @@
+.relateddeal-center {
+  padding-top: 2rem;
+  h1 {
+    font-size: 32px;
+    color: $clr-neutral-400;
+    font-weight: normal;
+  }
+  .lists {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 1rem 0;
+    gap: 1rem;
+
+    .card-container {
+      background-color: $clr-accent-100;
+      border-radius: $radius;
+      width: calc(min(330px, 90%));
+      .card-center {
+        margin: 1rem;
+
+        .img-container {
+          display: grid;
+          place-items: center;
+          justify-content: center;
+          align-content: center;
+          margin-top: 2em;
+          img {
+            width: 60%;
+          }
+        }
+
+        .info-container {
+          display: grid;
+          gap: 0.5em;
+          .info-header {
+            p {
+              margin-top: 3em;
+              display: flex;
+              gap: 0.5em;
+              span {
+                border-radius: 4px;
+                padding: 0.2em 0.3em;
+                color: $clr-primary-100;
+                font-size: $fs-200;
+
+                background-color: $clr-accent-200;
+              }
+            }
+          }
+          h3 {
+            text-align: center;
+          }
+          h3,
+          p {
+            color: $clr-neutral-100;
+            font-size: $fs-300;
+            font-weight: 700;
+          }
+          p {
+            font-weight: 400;
+          }
+          .price-container {
+            p {
+              display: flex;
+              gap: 0.5em;
+              align-items: end;
+              .price-1 {
+                font-size: 20px;
+                color: $clr-neutral-100;
+              }
+              .price-2 {
+                font-size: $fs-200;
+                color: #9fa9b3;
+              }
+              .price-3 {
+                font-size: $fs-200;
+                color: $clr-primary-400;
+              }
+            }
+          }
+        }
+
+        .btn {
+          margin-top: 0.5em;
+          background-color: $clr-primary-200;
+          font-size: $fs-300;
+          color: $clr-accent-100;
+          padding: 0.5rem 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  .relateddeal-center {
+    h1 {
+      font-size: 25px;
+    }
+  }
+}
